@@ -13,7 +13,7 @@ public class Main {
     }
     public static void task1() {
         System.out.println("Задание 1");
-        int one = 934;
+        int one1 = 934;
         System.out.println("Значение переменной one с типом int равно " + one);
         byte two = 34;
         System.out.println("Значение переменной two с типом byte равно " + two);
