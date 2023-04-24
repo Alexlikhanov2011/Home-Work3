@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -11,20 +13,20 @@ public class Main {
     }
     public static void task1() {
         System.out.println("Задание 1");
-        int a = 934;
-        System.out.println(a);
-        byte b = 34;
-        System.out.println(b);
+        int one = 934;
+        System.out.println("Значение переменной one с типом int равно " + one);
+        byte two = 34;
+        System.out.println("Значение переменной two с типом byte равно " + two);
 
-        short c = 4532;
-        System.out.println(c);
-        long d = 234596450L;
-        System.out.println(d);
-        float e = 2.5f;
-        System.out.println(e);
+        short three = 4532;
+        System.out.println("Значение переменной three с типом short равно " + three);
+        long four = 234596450L;
+        System.out.println("Значение переменной four с типом long равно " + four);
+        float five = 2.5f;
+        System.out.println("Значение переменной five с типом float равно " + five);
 
-        double f = 3.2;
-        System.out.println(f);
+        double six = 3.2;
+        System.out.println("Значение переменной six с типом double равно " + six);
     }
 
     public static void task2() {
@@ -38,7 +40,7 @@ public class Main {
         System.out.println(c);
         short d = 569;
         System.out.println(d);
-        short e = -159;
+        char e = 159;
         System.out.println(e);
 
         int f = 27897;
@@ -89,7 +91,7 @@ public static void task4() {
     byte minutes2 = 20;             // минут по условию
     byte days1 = 1;                 // дней по условию
     byte days2 = 3;               // дней по условию
-    byte days3 = 31;             // дней по условию
+    byte days3 = 30;             // дней по условию
     byte hoursInADay = 24;       // часов в сутках
     byte minutesInAnHour = 60;   // минут в часе
     int numberOfMinutes1 = days1 * hoursInADay * minutesInAnHour;  // колличество минут
@@ -164,22 +166,18 @@ public static void task6() {
 
 public static void task7() {
     System.out.println("Задание 7");
+int weightForLossInGrams = 7_000;
+int lossWeightPerDayMin = 250;
+int lossWeightPerDayMax = 500;
+double maxDaysCount = (double) weightForLossInGrams / lossWeightPerDayMin;
+double minDaysCount = (double) weightForLossInGrams / lossWeightPerDayMax;
+double lossWeightPerDayAverage = (lossWeightPerDayMin + lossWeightPerDayMax)/2D;
+double averageDaysCount = weightForLossInGrams / lossWeightPerDayAverage;
+    System.out.println("Минимальное количество дней для похудения " + minDaysCount);
+    System.out.println("Максимальное количество дней для похудения " + maxDaysCount);
+    System.out.printf(Locale.US,"Среднее количество дней для похудения %2f%n", + averageDaysCount);
 
-byte desiredWeight = 7;
-short grInKg = 1000;
-short grDay1 = 250;
-short grDay2 = 500;
-int grDesiredWeight = desiredWeight * grInKg;
-    System.out.println("Нужно сбросить вес в граммах " + grDesiredWeight);
-int daysSpent = grDesiredWeight / grDay1;
-    System.out.println("Уйдет на похудение " + daysSpent + " дней, если спортсмен будет терять каждый день по " + grDay1 + " гр.");
 
-    int daysSpent2 = grDesiredWeight / grDay2;
-    System.out.println("Уйдет на похудение " + daysSpent2 + " дней, если спортсмен будет терять каждый день по " + grDay2 + " гр.");
-
-int totalDays = daysSpent + daysSpent2;
-int averageDays = totalDays / 2;
-    System.out.println("В среднем потребуется " + averageDays + " день, для достижения цели.");
 
     }
     public static void task8(){
